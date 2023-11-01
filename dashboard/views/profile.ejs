@@ -1,0 +1,180 @@
+<%- include("partials/_header") %>
+<body>
+<div class="main-wrapper">
+	<%- include("partials/_navigation") %>
+	<%- include("partials/_sidebar") %>
+<div class="page-wrapper">
+<div class="content">
+<div class="row">
+<div class="col-sm-7 col-4">
+<h4 class="page-title">My Profile</h4>
+</div>
+<div class="col-sm-5 col-8 text-right m-b-30">
+<a href="/dashboard/edit-profile" class="btn btn-primary btn-rounded"><i class="fas fa-plus"></i> Edit Profile</a>
+</div>
+</div>
+<div class="card-box profile-header">
+<div class="row">
+<div class="col-md-12">
+<div class="profile-view">
+<div class="profile-img-wrap">
+<div class="profile-img">
+<a href="#"><img class="avatar" src="assets/img/doctor-03.jpg" alt></a>
+</div>
+</div>
+<div class="profile-basic">
+<div class="row">
+<div class="col-md-5">
+<div class="profile-info-left">
+<h3 class="user-name m-t-0 m-b-0" style="text-transform: capitalize;"><%= user.username %></h3>
+<small class="text-muted"><%= doctor.department %></small>
+<div class="staff-id">Employee ID : DR-0001</div>
+<div class="staff-msg"><a href="chat.html" class="btn btn-primary">Send Message</a></div>
+</div>
+</div>
+<div class="col-md-7">
+<ul class="personal-info">
+<li>
+<span class="title">Phone:</span>
+<span class="text"><a href>+90<%= doctor.phone %></a></span>
+</li>
+<li>
+<span class="title">Email:</span>
+<span class="text"><a href><span class="__cf_email__" data-cfemail="781b0a110b0c1116191f0a170e1d0b381d00191508141d561b1715"><%= doctor.email %></span></a></span>
+</li>
+<li>
+<span class="title">Birthday:</span>
+<span class="text"><% if (doctor.dateOfBirth) { %>
+	<% const birthDate = new Date(doctor.dateOfBirth); %>
+	<% const day = birthDate.getDate(); %>
+	<% const month = birthDate.getMonth() + 1; %>
+	<% const year = birthDate.getFullYear(); %>
+  
+	<p><%= day %>.<%= month %>.<%= year %> </p>
+  <% } else { %>
+	<p>Doğum günü bilgisi bulunmuyor.</p>
+  <% } %>
+  </span>
+</li>
+<li>
+<span class="title">Address:</span>
+<span class="text"><%= doctor.address %></span>
+</li>
+<li>
+<span class="title">Gender:</span>
+<span class="text"><%= doctor.gender %></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="profile-tabs">
+<ul class="nav nav-tabs nav-tabs-bottom">
+<li class="nav-item"><a class="nav-link active" href="#about-cont" data-toggle="tab">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#bottom-tab2" data-toggle="tab">Profile</a></li>
+<li class="nav-item"><a class="nav-link" href="#bottom-tab3" data-toggle="tab">Messages</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="about-cont">
+<div class="row">
+<div class="col-md-12">
+<div class="card-box">
+<h3 class="card-title">Education Informations</h3>
+<div class="experience-box">
+<ul class="experience-list">
+<li>
+<div class="experience-user">
+<div class="before-circle"></div>
+</div>
+<div class="experience-content">
+<div class="timeline-content">
+<a href="#/" class="name">International College of Medical Science (UG)</a>
+<div>MBBS</div>
+<span class="time">2001 - 2003</span>
+</div>
+</div>
+</li>
+<li>
+<div class="experience-user">
+<div class="before-circle"></div>
+</div>
+<div class="experience-content">
+<div class="timeline-content">
+<a href="#/" class="name">International College of Medical Science (PG)</a>
+<div>MD - Obstetrics & Gynaecology</div>
+<span class="time">1997 - 2001</span>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="card-box m-b-0">
+<h3 class="card-title">Experience</h3>
+<div class="experience-box">
+<ul class="experience-list">
+<li>
+<div class="experience-user">
+<div class="before-circle"></div>
+</div>
+<div class="experience-content">
+<div class="timeline-content">
+<a href="#/" class="name">Consultant Gynecologist</a>
+<span class="time">Jan 2014 - Present (4 years 8 months)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="experience-user">
+<div class="before-circle"></div>
+</div>
+<div class="experience-content">
+<div class="timeline-content">
+<a href="#/" class="name">Consultant Gynecologist</a>
+<span class="time">Jan 2009 - Present (6 years 1 month)</span>
+</div>
+</div>
+</li>
+<li>
+<div class="experience-user">
+<div class="before-circle"></div>
+</div>
+<div class="experience-content">
+<div class="timeline-content">
+<a href="#/" class="name">Consultant Gynecologist</a>
+<span class="time">Jan 2004 - Present (5 years 2 months)</span>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="bottom-tab2">
+Tab content 2
+</div>
+<div class="tab-pane" id="bottom-tab3">
+Tab content 3
+</div>
+</div>
+</div>
+</div>
+<%- include("partials/_chat") %>
+</div>
+</div>
+<div class="sidebar-overlay" data-reff></div>
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+
+<!-- Mirrored from medifab.dreamguystech.com/admin-template/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Sep 2023 15:24:33 GMT -->
+</html>

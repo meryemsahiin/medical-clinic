@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from medifab.dreamguystech.com/admin-template/tables-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Sep 2023 15:24:50 GMT -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+<title>Medifab - Bootstrap Admin Template</title>
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body>
+<div class="main-wrapper">
+<div class="header">
+<div class="header-left">
+<a href="index.html" class="logo">
+<img src="assets/img/Logo_Hospital.png" width="30" height="30" alt>
+</a>
+</div>
+<a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fas fa-bars"></i></a>
+<ul class="nav user-menu float-right">
+<li class="nav-item dropdown d-none d-sm-block">
+<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><i class="far fa-bell"></i> <span class="badge badge-pill bg-danger float-right">3</span></a>
+<div class="dropdown-menu notifications">
+<div class="topnav-dropdown-header">
+<span>Notifications</span>
+</div>
+<div class="drop-scroll">
+<ul class="notification-list">
+<li class="notification-message">
+<a href="activities.html">
+<div class="media">
+<span class="avatar">
+<img alt="John Doe" src="assets/img/user.jpg" class="img-fluid">
+</span>
+<div class="media-body">
+<p class="noti-details"><span class="noti-title">John Doe</span> added new task <span class="noti-title">Patient appointment booking</span></p>
+<p class="noti-time"><span class="notification-time">4 mins ago</span></p>
+</div>
+</div>
+</a>
+</li>
+<li class="notification-message">
+<a href="activities.html">
+<div class="media">
+<span class="avatar">V</span>
+<div class="media-body">
+<p class="noti-details"><span class="noti-title">Tarah Shropshire</span> changed the task name <span class="noti-title">Appointment booking with payment gateway</span></p>
+<p class="noti-time"><span class="notification-time">6 mins ago</span></p>
+</div>
+</div>
+</a>
+</li>
+<li class="notification-message">
+<a href="activities.html">
+<div class="media">
+<span class="avatar">L</span>
+<div class="media-body">
+<p class="noti-details"><span class="noti-title">Misty Tison</span> added <span class="noti-title">Domenic Houston</span> and <span class="noti-title">Claire Mapes</span> to project <span class="noti-title">Doctor available module</span></p>
+<p class="noti-time"><span class="notification-time">8 mins ago</span></p>
+</div>
+</div>
+</a>
+</li>
+<li class="notification-message">
+<a href="activities.html">
+<div class="media">
+<span class="avatar">G</span>
+<div class="media-body">
+<p class="noti-details"><span class="noti-title">Rolland Webber</span> completed task <span class="noti-title">Patient and Doctor video conferencing</span></p>
+<p class="noti-time"><span class="notification-time">12 mins ago</span></p>
+</div>
+</div>
+</a>
+</li>
+<li class="notification-message">
+<a href="activities.html">
+<div class="media">
+<span class="avatar">V</span>
+<div class="media-body">
+<p class="noti-details"><span class="noti-title">Bernardo Galaviz</span> added new task <span class="noti-title">Private chat module</span></p>
+<p class="noti-time"><span class="notification-time">2 days ago</span></p>
+</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<div class="topnav-dropdown-footer">
+<a href="activities.html">View all Notifications</a>
+</div>
+</div>
+</li>
+<li class="nav-item dropdown d-none d-sm-block">
+<a href="javascript:void(0);" id="open_msg_box" class="hasnotifications nav-link"><i class="far fa-comment"></i> <span class="badge badge-pill bg-danger float-right">8</span></a>
+</li>
+<li class="nav-item dropdown has-arrow">
+<a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+<span class="user-img"><img class="rounded-circle" src="assets/img/user.jpg" width="40" alt="Admin">
+<span class="status online"></span></span>
+<span>Admin</span>
+</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="profile.html">My Profile</a>
+<a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+<a class="dropdown-item" href="settings.html">Settings</a>
+<a class="dropdown-item" href="login.html">Logout</a>
+</div>
+</li>
+</ul>
+<div class="dropdown mobile-user-menu float-right">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+<div class="dropdown-menu dropdown-menu-right">
+<a class="dropdown-item" href="profile.html">My Profile</a>
+<a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+<a class="dropdown-item" href="settings.html">Settings</a>
+<a class="dropdown-item" href="login.html">Logout</a>
+</div>
+</div>
+</div>
+<div class="sidebar" id="sidebar">
+<div class="sidebar-inner slimscroll">
+<div id="sidebar-menu" class="sidebar-menu">
+<ul>
+<li class="menu-title">Main</li>
+<li>
+<a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+</li>
+<li>
+<a href="doctors.html"><i class="fas fa-user-md"></i> Doctors</a>
+</li>
+<li>
+<a href="patients.html"><i class="fas fa-wheelchair"></i> Patients</a>
+</li>
+<li>
+<a href="appointments.html"><i class="far fa-calendar-alt"></i> Appointments</a>
+</li>
+<li>
+<a href="schedule.html"><i class="far fa-calendar-check"></i> Doctor Schedule</a>
+</li>
+<li>
+<a href="departments.html"><i class="far fa-hospital"></i> Departments</a>
+</li>
+<li class="submenu">
+<a href="#"><i class="fas fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="employees.html">Employees List</a></li>
+<li><a href="leaves.html">Leaves</a></li>
+<li><a href="holidays.html">Holidays</a></li>
+<li><a href="attendance.html">Attendance</a></li>
+</ul>
+</li>
+<li class="submenu">
+<a href="#"><i class="far fa-money-bill-alt"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="invoices.html">Invoices</a></li>
+<li><a href="payments.html">Payments</a></li>
+<li><a href="expenses.html">Expenses</a></li>
+<li><a href="taxes.html">Taxes</a></li>
+<li><a href="provident-fund.html">Provident Fund</a></li>
+</ul>
+</li>
+<li class="submenu">
+<a href="#"><i class="fas fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="salary.html"> Employee Salary </a></li>
+<li><a href="salary-view.html"> Payslip </a></li>
+</ul>
+</li>
+<li>
+<a href="chat.html"><i class="fas fa-comments"></i> Chat <span class="badge badge-pill bg-primary float-right">5</span></a>
+</li>
+<li class="submenu">
+<a href="#"><i class="fas fa-video"></i></i> <span> Calls</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="voice-call.html">Voice Call</a></li>
+<li><a href="video-call.html">Video Call</a></li>
+<li><a href="incoming-call.html">Incoming Call</a></li>
+</ul>
+</li>
+<li class="submenu">
+<a href="#"><i class="fas fa-envelope"></i> <span> Email</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="compose.html">Compose Mail</a></li>
+<li><a href="inbox.html">Inbox</a></li>
+<li><a href="mail-view.html">Mail View</a></li>
+</ul>
+</li>
+<li class="submenu">
+<a href="#"><i class="far fa-comment-dots"></i> <span> Blog</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="blog.html">Blog</a></li>
+<li><a href="blog-details.html">Blog View</a></li>
+<li><a href="add-blog.html">Add Blog</a></li>
+<li><a href="edit-blog.html">Edit Blog</a></li>
+</ul>
+</li>
+<li>
+<a href="assets.html"><i class="fas fa-cube"></i> Assets</a>
+</li>
+<li>
+<a href="activities.html"><i class="far fa-bell"></i> Activities</a>
+</li>
+<li class="submenu">
+<a href="#"><i class="far fa-flag"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="expense-reports.html"> Expense Report </a></li>
+<li><a href="invoice-reports.html"> Invoice Report </a></li>
+</ul>
+</li>
+<li>
+<a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+</li>
+<li class="menu-title">UI Elements</li>
+<li class="submenu">
+<a href="#"><i class="fas fa-laptop"></i> <span> Components</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="uikit.html">UI Kit</a></li>
+<li><a href="typography.html">Typography</a></li>
+<li><a href="tabs.html">Tabs</a></li>
+</ul>
+</li>
+<li>
+<a href="widgets.html"><i class="fas fa-th"></i> Widgets</a>
+</li>
+<li class="submenu">
+<a href="#"><i class="far fa-edit"></i> <span> Forms</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="form-basic-inputs.html">Basic Inputs</a></li>
+<li><a href="form-input-groups.html">Input Groups</a></li>
+<li><a href="form-horizontal.html">Horizontal Form</a></li>
+<li><a href="form-vertical.html">Vertical Form</a></li>
+</ul>
+</li>
+<li class="submenu">
+<a href="#"><i class="fas fa-table"></i> <span> Tables</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a class="active" href="tables-basic.html">Basic Tables</a></li>
+<li><a href="tables-datatables.html">Data Table</a></li>
+</ul>
+</li>
+<li>
+<a href="calendar.html"><i class="far fa-calendar-alt"></i> Calendar</a>
+</li>
+<li class="menu-title">Extras</li>
+<li class="submenu">
+<a href="#"><i class="fas fa-columns"></i> <span>Pages</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="login.html"> Login </a></li>
+<li><a href="register.html"> Register </a></li>
+<li><a href="forgot-password.html"> Forgot Password </a></li>
+<li><a href="change-password2.html"> Change Password </a></li>
+<li><a href="lock-screen.html"> Lock Screen </a></li>
+<li><a href="profile.html"> Profile </a></li>
+<li><a href="gallery.html"> Gallery </a></li>
+<li><a href="error-404.html">404 Error </a></li>
+<li><a href="error-500.html">500 Error </a></li>
+<li><a href="coming-soon.html">Coming Soon </a></li>
+<li><a href="blank-page.html"> Blank Page </a></li>
+</ul>
+</li>
+<li class="submenu">
+<a href="javascript:void(0);"><i class="fas fa-share-alt"></i> <span>Multi Level</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li class="submenu">
+<a href="javascript:void(0);"><span>Level 1</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="javascript:void(0);"><span>Level 2</span></a></li>
+<li class="submenu">
+<a href="javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="javascript:void(0);">Level 3</a></li>
+<li><a href="javascript:void(0);">Level 3</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);"><span>Level 2</span></a></li>
+</ul>
+</li>
+<li>
+<a href="javascript:void(0);"><span>Level 1</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="page-wrapper">
+<div class="content">
+<div class="row">
+<div class="col-sm-12">
+<h4 class="page-title">Basic Tables</h4>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6">
+<div class="card-box">
+<div class="card-block">
+<h4 class="card-title">Basic Table</h4>
+<div class="table-responsive">
+<table class="table m-b-0">
+<thead>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John</td>
+<td>Doe</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1872777076587d60797568747d367b7775">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>Moe</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="85e8e4f7fcc5e0fde4e8f5e9e0abe6eae8">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>July</td>
+<td>Dooley</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="81ebf4edf8c1e4f9e0ecf1ede4afe2eeec">[email&#160;protected]</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="card-box">
+<div class="card-block">
+<h5 class="text-bold card-title">Striped Rows</h5>
+<div class="table-responsive">
+<table class="table table-striped m-b-0">
+<thead>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John</td>
+<td>Doe</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7b111413153b1e031a160b171e55181416">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>Moe</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f19c908388b19489909c819d94df929e9c">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>July</td>
+<td>Dooley</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f9938c9580b99c81989489959cd79a9694">[email&#160;protected]</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6">
+<div class="card-box">
+<div class="card-block">
+<h5 class="text-bold card-title">Bordered Table</h5>
+<div class="table-responsive">
+<table class="table table-bordered m-b-0">
+<thead>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John</td>
+<td>Doe</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="33595c5b5d73564b525e435f561d505c5e">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>Moe</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="670a06151e27021f060a170b024904080a">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>July</td>
+<td>Dooley</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7e140b12073e1b061f130e121b501d1113">[email&#160;protected]</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="card-box">
+<div class="card-block">
+<h4 class="card-title">Hover Rows</h4>
+<div class="table-responsive">
+<table class="table table-hover m-b-0">
+<thead>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>John</td>
+<td>Doe</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d1bbbeb9bf91b4a9b0bca1bdb4ffb2bebc">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>Moe</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b2dfd3c0cbf2d7cad3dfc2ded79cd1dddf">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td>July</td>
+<td>Dooley</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="acc6d9c0d5ecc9d4cdc1dcc0c982cfc3c1">[email&#160;protected]</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6">
+<div class="card-box">
+<div class="card-block">
+<h4 class="card-title">Contextual Classes</h4>
+<div class="table-responsive">
+<table class="table m-b-0">
+<thead>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>Defaultson</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8eeaebe8cefde1e3ebe3efe7e2a0ede1e3">[email&#160;protected]</a></td>
+</tr>
+<tr class="table-primary">
+<td>Primary</td>
+<td>Doe</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="355f5a5d5b75504d54584559501b565a58">[email&#160;protected]</a></td>
+</tr>
+<tr class="table-secondary">
+<td>Secondary</td>
+<td>Moe</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cfa2aebdb68faab7aea2bfa3aae1aca0a2">[email&#160;protected]</a></td>
+</tr>
+<tr class="table-success">
+<td>Success</td>
+<td>Dooley</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dbb1aeb7a29bbea3bab6abb7bef5b8b4b6">[email&#160;protected]</a></td>
+</tr>
+<tr class="table-danger">
+<td>Danger</td>
+<td>Refs</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c8aaa788adb0a9a5b8a4ade6aba7a5">[email&#160;protected]</a></td>
+</tr>
+<tr class="table-warning">
+<td>Warning</td>
+<td>Activeson</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f0e0c1b2f0a170e021f030a410c0002">[email&#160;protected]</a></td>
+</tr>
+<tr class="table-info">
+<td>Info</td>
+<td>Activeson</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c3a2a0b783a6bba2aeb3afa6eda0acae">[email&#160;protected]</a></td>
+</tr>
+<tr class="table-light">
+<td>Light</td>
+<td>Activeson</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fa9b998eba9f829b978a969fd4999597">[email&#160;protected]</a></td>
+</tr>
+<tr class="table-dark">
+<td>Dark</td>
+<td>Activeson</td>
+<td><a href="https://medifab.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fd9c9e89bd98859c908d9198d39e9290">[email&#160;protected]</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="card-box">
+<div class="card-block">
+<h4 class="card-title">Responsive Tables</h4>
+<div class="table-responsive">
+<table class="table m-b-0">
+<thead>
+<tr>
+<th>#</th>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Age</th>
+<th>City</th>
+<th>Country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>Pitt</td>
+<td>35</td>
+<td>New York</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>Pitt</td>
+<td>35</td>
+<td>New York</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>Pitt</td>
+<td>35</td>
+<td>New York</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>Pitt</td>
+<td>35</td>
+<td>New York</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>Pitt</td>
+<td>35</td>
+<td>New York</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>Pitt</td>
+<td>35</td>
+<td>New York</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>Pitt</td>
+<td>35</td>
+<td>New York</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>Pitt</td>
+<td>35</td>
+<td>New York</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Anna</td>
+<td>Pitt</td>
+<td>35</td>
+<td>New York</td>
+<td>USA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="notification-box">
+<div class="msg-sidebar notifications msg-noti">
+<div class="topnav-dropdown-header">
+<span>Messages</span>
+</div>
+<div class="drop-scroll msg-list-scroll">
+<ul class="list-box">
+<li>
+<a href="chat.html">
+<div class="list-item">
+<div class="list-left">
+<span class="avatar">R</span>
+</div>
+<div class="list-body">
+<span class="message-author">Richard Miles </span>
+<span class="message-time">12:28 AM</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<div class="list-item new-message">
+<div class="list-left">
+<span class="avatar">J</span>
+</div>
+<div class="list-body">
+<span class="message-author">John Doe</span>
+<span class="message-time">1 Aug</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<div class="list-item">
+<div class="list-left">
+<span class="avatar">T</span>
+</div>
+<div class="list-body">
+<span class="message-author"> Tarah Shropshire </span>
+<span class="message-time">12:28 AM</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<div class="list-item">
+<div class="list-left">
+<span class="avatar">M</span>
+</div>
+<div class="list-body">
+<span class="message-author">Mike Litorus</span>
+<span class="message-time">12:28 AM</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<div class="list-item">
+<div class="list-left">
+<span class="avatar">C</span>
+</div>
+<div class="list-body">
+<span class="message-author"> Catherine Manseau </span>
+<span class="message-time">12:28 AM</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<div class="list-item">
+<div class="list-left">
+<span class="avatar">D</span>
+</div>
+<div class="list-body">
+<span class="message-author"> Domenic Houston </span>
+<span class="message-time">12:28 AM</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<div class="list-item">
+<div class="list-left">
+<span class="avatar">B</span>
+</div>
+<div class="list-body">
+<span class="message-author"> Buster Wigton </span>
+<span class="message-time">12:28 AM</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<div class="list-item">
+<div class="list-left">
+<span class="avatar">R</span>
+</div>
+<div class="list-body">
+<span class="message-author"> Rolland Webber </span>
+<span class="message-time">12:28 AM</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<div class="list-item">
+<div class="list-left">
+<span class="avatar">C</span>
+</div>
+<div class="list-body">
+<span class="message-author"> Claire Mapes </span>
+<span class="message-time">12:28 AM</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<div class="list-item">
+<div class="list-left">
+<span class="avatar">M</span>
+</div>
+<div class="list-body">
+<span class="message-author">Melita Faucher</span>
+<span class="message-time">12:28 AM</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<div class="list-item">
+<div class="list-left">
+<span class="avatar">J</span>
+</div>
+<div class="list-body">
+<span class="message-author">Jeffery Lalor</span>
+<span class="message-time">12:28 AM</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<div class="list-item">
+<div class="list-left">
+<span class="avatar">L</span>
+</div>
+<div class="list-body">
+<span class="message-author">Loren Gatlin</span>
+<span class="message-time">12:28 AM</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="chat.html">
+<div class="list-item">
+<div class="list-left">
+<span class="avatar">T</span>
+</div>
+<div class="list-body">
+<span class="message-author">Tarah Shropshire</span>
+<span class="message-time">12:28 AM</span>
+<div class="clearfix"></div>
+<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<div class="topnav-dropdown-footer">
+<a href="chat.html">See all messages</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sidebar-overlay" data-reff></div>
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+
+<!-- Mirrored from medifab.dreamguystech.com/admin-template/tables-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Sep 2023 15:24:50 GMT -->
+</html>

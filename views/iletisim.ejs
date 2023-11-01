@@ -1,0 +1,200 @@
+<%- include("partials/_header") %>
+
+<body>
+   <!--=================================
+         loading start-->
+   <div id="pq-loading">
+      <div id="pq-loading-center"> <img src="images/logo.png" class="img-fluid" alt="loading"> </div>
+   </div>
+   <!--=================================
+         loading end-->
+   <!--=================================
+         header start-->
+         <%- include("partials/_navigation") %>
+   <!--=================================
+         header end-->
+   <!--=================================
+         Banner start-->
+   <div class="pq-breadcrumb" style="background-image:url('images/breadcrumb.jpg');">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-12">
+               <nav aria-label="breadcrumb">
+                  <div class="pq-breadcrumb-title">
+                     <h2>İletişim</h2> </div>
+                  <div class="pq-breadcrumb-container mt-2">
+                     <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/"><i class="fas fa-home mr-2"></i>Anasayfa</a></li>
+                        <li class="breadcrumb-item active">İletişim</li>
+                     </ol>
+                  </div>
+               </nav>
+            </div>
+            <div class="col-lg-4">
+               <div class="pq-breadcrumb-img text-right wow fadeInRight"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--=================================
+         Banner end-->
+   <!--=================================
+         conatct-us start-->
+   <section class="pq-contact-us">
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+               <div class="pq-contact-box">
+                  <div class="pq-contact-box-icon">
+                     <div class="icon animation-grow"> <i aria-hidden="true" class="ion ion-location"></i> </div>
+                  </div>
+                  <div class="pq-contact-box-info">
+                     <h4 class="pq-contact-box-title">
+                              Konumumuz
+                           </h4>
+                     <p class="pq-contact-box-description"> The Queen's Walk, Bishop's, London SE1 7PB, United Kingdom. </p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-0 mt-md-0 mt-4">
+               <div class="pq-contact-box">
+                  <div class="pq-contact-box-icon">
+                     <div class="icon animation-grow"> <i aria-hidden="true" class="ion ion-ios-telephone"></i> </div>
+                  </div>
+                  <div class="pq-contact-box-info">
+                     <h4 class="pq-contact-box-title">
+                              İletişim Numaralarımız
+                           </h4>
+                     <p class="pq-contact-box-description"><a href="https://api.whatsapp.com/send?phone=(567) 1234-567-8900"> + (567) 1234-567-8900
+                        <br>+ (567) 1234-567-8901 </a></p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-0 mt-4">
+               <div class="pq-contact-box">
+                  <div class="pq-contact-box-icon">
+                     <div class="icon animation-grow"> <i aria-hidden="true" class="ion ion-email-unread"></i> </div>
+                  </div>
+                  <div class="pq-contact-box-info">
+                     <h4 class="pq-contact-box-title">
+                              Mail Adresimiz
+                           </h4>
+                     <p class="pq-contact-box-description"> <a href="mailto:ornek@ornek.com">ornek@ornek.com</a>
+                        <br><a href="mailto:ornek2@ornek.com">ornek2@ornek.com</a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!--=================================
+         contact-us end-->
+   <!--=================================
+         get-in-touch start-->
+   <section class="get-in-touch p-0">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8 col-md-8  pq-form-box">
+               <div class="form-container">
+                  <div class="pq-section pq-style-1 text-center p-0"> <span class="pq-section-sub-title">iletişim</span>
+                     <h5 class="pq-section-title">Bizimle İletişime geçin</h5> </div>
+               </div>
+               <div class="pq-applyform-whitebg text-start">
+                  <form action="/iletisim" method="POST" class="pq-applyform" novalidate>
+                     <div class="col-md-12">
+                        <div style="display:none;" class="alert alert-success" id="sendMessage"></div> 
+                     <div class="row">
+                        
+                        <div class="col-lg-6 col-md-6"> 
+                           <input type="text" id="first-name" name="name" class="name-field" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Adınızı Girin"> 
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                           <input type="email" id="e-mail" name="email" class="e-mail-field" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Email Adresinizi Girin"> 
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                           <input type="text" id="phone-number" name="phone" class="phone-number-field" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Telefon Numaranızı Girin"> 
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                           <input type="text" id="subject" name="subject" class="subject-field" size="40" aria-required="true" aria-invalid="false" placeholder="Konu"> 
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                           <textarea name="message" id="your-message" cols="40" rows="10" aria-required="true" aria-invalid="false" placeholder="Mesajınızı Yazın..."></textarea>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                           <a class="pq-button form-btn">
+                              <div class="pq-button-block"><button type="submit">
+                                 <span class="pq-button-text me-0">gönder</span></button>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!--=================================
+         get-in-touch end-->
+   <!--=================================
+         map start-->
+   <div class="map pt-0">
+      <div class="pq-bg-map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d317893.19730324426!2d-0.1195537!3d51.5032973!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x487604b900d26973%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye%20Riverside%20Building%2C%20County%20Hall%20London%20SE1%207PB%20United%20Kingdom!3m2!1d51.5032973!2d-0.1195537!5e0!3m2!1sen!2sin!4v1652772883319!5m2!1sen!2sin" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+   </div>
+   <!--=================================
+         map end-->
+   <!--=================================-->
+   <script>
+      const form = document.querySelector('form')
+      const sendMessage = document.querySelector('#sendMessage')
+
+
+      form.addEventListener("submit", async (e) => {
+         e.preventDefault();
+
+
+         const name = form.name.value
+         const email = form.email.value
+         const phone = form.phone.value
+         const subject = form.subject.value
+         const message = form.message.value
+
+         try {
+            const res = await fetch('/iletisim', {
+               method: "POST",
+               body: JSON.stringify({name, email, phone, subject, message }),
+               headers: { "Content-Type": "application/json" }
+            })
+
+            const data = await res.json();
+
+            if (data.succeded) {
+
+               sendMessage.textContent = "Mesajınız başarıyla iletildi!"
+               sendMessage.style.display ="block"
+
+               setTimeout(() => {
+                  sendMessage.style.display ="none";
+                  form.name.value = ""
+                  form.email.value = ""
+                  form.phone.value = ""
+                  form.subject.value = ""
+                  form.message.value = ""
+               }, 5000)
+
+            } 
+
+         } catch (err) {
+            console.log("ERR::", err)
+         }
+      })
+   </script>
+
+   <%- include("partials/_footer") %>
+</body>
+
+
+<!-- Mirrored from peacefulqode.com/themes/medicate/html/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 13:20:57 GMT -->
+</html>

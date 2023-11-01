@@ -1,0 +1,95 @@
+<%- include("partials/_header") %>
+<body>
+   <!--=================================
+         loading start-->
+   <div id="pq-loading">
+      <div id="pq-loading-center"> <img src="images/logo.png" class="img-fluid" alt="loading"> </div>
+   </div>
+   <!--=================================
+         loading end-->
+   <!--=================================
+         header start-->
+         <%- include("partials/_navigation") %>
+   <!--=================================
+         header end-->
+   <!--=================================
+         Banner start-->
+   <div class="pq-breadcrumb" style="background-image:url('images/breadcrumb.jpg');">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-12">
+               <nav aria-label="breadcrumb">
+                  <div class="pq-breadcrumb-title">
+                     <h2>Doktorlarımız</h2> </div>
+                  <div class="pq-breadcrumb-container mt-2">
+                     <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/"><i class="fas fa-home mr-2"></i>Anasayfa</a></li>
+                        <li class="breadcrumb-item active">Doktorlarımız</li>
+                     </ol>
+                  </div>
+               </nav>
+            </div>
+            <div class="col-lg-4">
+               <div class="pq-breadcrumb-img text-right wow fadeInRight"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--=================================
+         Banner end-->
+   <!--=================================
+         our-team start-->
+   <section class="our-team pq-pb-100">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="pq-section pq-style-1 text-center"> <span class="pq-section-sub-title">EKİBİMİZ</span>
+                  <h5 class="pq-section-title">Uzman Doktrolarımızla Tanışın</h5> </div>
+            </div>
+         </div>
+         <div class="row justify-content-center ">
+            <% for (match of matchedUsersAndDoctors) { %>
+            <div class="col-xl-4 col-md-6 col-sm-12">
+               <div class="pq-team pq-team-style-1 pb-lg-5 ">
+                  <div class="pq-team-box pq-style-1">
+                     <div class="pq-team-img"> <img src="images/team/2.jpg" class="img-fluid" alt="team-image">
+                        <div class="pq-team-social">
+                           <ul>
+                              <li>
+                                 <a class="facebook" href="#" target="_blank"> <span class="sr-only">Facebook</span> <i class="fab fa-facebook"></i> </a>
+                              </li>
+                              <li>
+                                 <a class="twitter" href="#" target="_blank"> <span class="sr-only">Twitter</span> <i class="fab fa-twitter"></i> </a>
+                              </li>
+                              <li>
+                                 <a class="google-plus" href="#" target="_blank"> <span class="sr-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="pq-team-info">
+                        <h5 class="pq-member-name">
+                              <a href="/doktorumuz">
+                                 <%= match.user.username %></a>
+                           </h5> <span class="pq-team-designation"><%= match.doctor.department %></span> </div>
+                  </div>
+               </div>
+            </div>
+            <% } %>
+         </div>
+         
+      </div>
+   </section>
+   <!--=================================
+         our-team end-->
+   
+  
+   <!-- =================================
+        Footer start
+   ============================== -->
+   <%- include("partials/_footer") %>
+</body>
+
+
+<!-- Mirrored from peacefulqode.com/themes/medicate/html/doctor-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 13:20:48 GMT -->
+</html>

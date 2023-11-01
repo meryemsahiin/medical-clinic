@@ -1,0 +1,162 @@
+<%- include("partials/_header") %>
+
+<body>
+      <!--=================================
+         loading start-->
+      <div id="pq-loading">
+            <div id="pq-loading-center"> <img src="images/logo.png" class="img-fluid" alt="loading"> </div>
+      </div>
+      <!--=================================
+         loading end-->
+      <!--=================================
+         header start-->
+         <%- include("partials/_navigation") %>
+         <!--=================================
+         header end-->
+   <!--=================================
+         Banner start-->
+
+      <div class="pq-breadcrumb" style="background-image:url('images/breadcrumb.jpg');">
+            <div class="container">
+                  <div class="row align-items-center">
+                        <div class="col-lg-12">
+                              <nav aria-label="breadcrumb">
+                                    <div class="pq-breadcrumb-title">
+                                          <h2>Randevu Al
+                        </h2> </div>
+                                    <div class="pq-breadcrumb-container mt-2">
+                                          <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="/"><i class="fas fa-home mr-2"></i>Anasayfa</a></li>
+                                                <li class="breadcrumb-item active">Randevu Al</li>
+                                          </ol>
+                                    </div>
+                              </nav>
+                        </div>
+                        <div class="col-lg-4">
+                              <div class="pq-breadcrumb-img text-right wow fadeInRight"></div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!--=================================
+         Banner end-->
+      <!--=================================
+         appoinment-form start-->
+      <div class="appoinment-form  appointment-page pq-pt-130 pb-0">
+            <div class="container">
+                  <div class="row">
+                        <div class="col-xl-6">
+                              <div class="appoinment-box">
+                                    <form action="randevu/randevu-al" method="POST" class="pq-applyform" id="your-form" novalidate>
+                                          <div class="pq-appointment">
+                                                <div class="row">
+                                                      <% if (locals.successMessage) { %>
+                                                            <div class="success-message">
+                                                              <%= locals.successMessage %>
+                                                            </div>
+                                                          <% } %>
+                                                      <div class="col-lg-12">
+                                                            <label> <span class="pq-appointment-title">Bölüm Seçin</span> <span class="form-control-wrap your-country">
+                                                            <select name="department" class="form-select" aria-invalid="false">
+                                                            <option value="Gynaecology">Anjiyopilasti</option>
+                                                            <option value="Cardiology">Kardiyoloji</option>
+                                                            <option value="Orthopaedics">Endokrinoloji</option>
+                                                            <option value="Medicine">Göz Bakım</option>
+                                                            <option value="Medicine">Nöroloji</option>
+                                                            <option value="Medicine">Ortopedi</option>
+                                                         </select>
+                                                      </span> </label>
+                                                      </div>
+                                                      <div class="col-lg-12">
+                                                            <label> <span class="pq-appointment-title">Doktorunuzu Seçin</span> <span class="form-control-wrap your-country">
+                                                            <select name="doctor" class="form-select" aria-invalid="false">
+                                                            <option value="Naidan Smith">Naidan Smith</option>
+                                                            <option value="Danial Frankie">Danial Frankie</option>
+                                                            <option value="Jason Roy">Jason Roy</option>
+                                                            <option value="Alexa Jhon">Alexa Jhon</option>
+                                                         </select>
+                                                      </span> </label>
+                                                      </div>
+                                                      <div class="col-lg-12">
+                                                            <input type="text" id="patient-name" name="patientName" class="form-control pq-bg-white paitent-name-field"  placeholder="Hasta İsmi" required>
+                                                      </div>
+                                                      <div class="col-lg-6">
+                                                            <input type="text" id="phone-number" name="phoneNumber" class="form-control pq-bg-white phone-number-field" aria-invalid="false" placeholder="Telefon Numarası" required>
+                                                      </div>
+                                                      <!-- <div class="col-lg-6">
+                                                            <input type="text" id="e-mail" name="email" class="form-control pq-bg-white e-mail-field" aria-invalid="false" placeholder="Your email" required> 
+                                                      </div> -->
+                                                      <div class="col-lg-6">
+                                                            <input type="date" name="appointmentDate" value="" class="form-control pq-bg-white" aria-invalid="false">
+                                                      </div>
+                                                      <div class="col-lg-6">
+                                                                  <input type="text" id="time" name="appointmentTime" class="form-control pq-bg-white time-field" placeholder="HH:MM">
+                                                      </div>
+                                                              
+                                                      <div class="col-lg-12">
+                                                            <textarea cols="40" id="message" name="appointmentNote rows="10" aria-invalid="false" class="form-control pq-bg-white" placeholder="Doktorunuza Bildirmek İstediğiniz Bir şey Var Mı?"></textarea>
+                                                      </div>
+                                                      <div class="col-lg-12">
+                                                            <button type="submit" class="pq-button form-btn">
+                                                                <div class="pq-button-block">
+                                                                    <span class="pq-button-text me-0">GÖNDER</span>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                </div>
+                                          </div>
+                                    </form>
+                                    <div id="flash-message" style="display: none;"></div>
+                              </div>
+                        </div>
+                        <div class="col-xl-6">
+                              <div class="appointment-img text-center"> <img src="images/appoinment.png" alt="" class="img-a img-fluid"> </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!--=================================
+         appoinment-form end-->
+      <!--=================================
+         contact-healthcare start-->
+      <section class="contact-us pq-bg-primary-dark pq-bg-img-1">
+            <div class="container">
+                  <div class="row ">
+                        <div class="col-xl-7">
+                              <h6 class="pq-title">Siz Siz Olun, Sağlığınız Bizimle Güvende Olsun!</h6> </div>
+                        <div class="col-xl-5 d-xl-flex justify-content-xl-end align-items-center text-left mt-xl-0 mt-4">
+                              <a class="pq-button pq-button-flat" href="/iletisim">
+                                    <div class="pq-button-block"> <span class="pq-button-text">Bize Ulaşın!</span> <i class="ion ion-plus-round"></i> </div>
+                              </a>
+                        </div>
+                  </div>
+            </div>
+      </section>
+      <!--=================================
+         contact-healthcare end-->
+
+      <!--=================================
+         footer start-->
+      <script>
+            // Sayfa yüklendiğinde kaydırma pozisyonunu sakla
+window.addEventListener('submit', () => {
+  sessionStorage.setItem('scrollPosition', window.scrollY);
+});
+
+// Sayfa yeniden yüklendiğinde kaydırma pozisyonunu geri al ve ayarla
+window.addEventListener('submit', () => {
+  const savedScrollPosition = sessionStorage.getItem('scrollPosition');
+  if (savedScrollPosition) {
+    window.scrollTo(0, savedScrollPosition);
+    sessionStorage.removeItem('scrollPosition');
+  }
+});
+
+      </script>
+
+         <%- include("partials/_footer") %>
+</body>
+
+
+<!-- Mirrored from peacefulqode.com/themes/medicate/html/make-appoinment.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 13:20:48 GMT -->
+</html>

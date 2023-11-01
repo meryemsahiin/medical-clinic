@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from medifab.dreamguystech.com/admin-template/add-doctor.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Sep 2023 15:24:56 GMT -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+<title>Medifab - Bootstrap Admin Template</title>
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body>
+<div class="main-wrapper">
+	<%- include("partials/_navigation") %>
+	<%- include("partials/_sidebar") %>
+<div class="page-wrapper">
+
+	<div class="content">
+		<div class="row">
+			
+		<div class="col-md-8 offset-md-2">
+		<h4 class="page-title">Add Doctor</h4>
+		</div>
+		</div>
+		<div class="row">
+		<div class="col-md-8 offset-md-2">
+		<form action="/dashboard/add-doctor" method="POST" enctype="multipart/form-data">
+
+		<div class="row">
+			<div class="col-sm-12" >
+				<div style="display: none;" class="alert alert-success" id="successMessage">Doktor Başarıyla Oluşturuldu.</div>
+			</div>
+		<div class="col-sm-6">
+			
+				<div style="display: none;" class="alert alert-danger" id="firstname"></div>
+			 
+		<div class="form-group">
+		<label>First Name <span class="text-danger">*</span></label>
+		<input name="firstname" class="form-control" type="text">
+		</div>
+		</div>
+		
+		<div class="col-sm-6">
+			<div style="display: none;" class="alert alert-danger" id="lastname"></div>
+		<div class="form-group">
+		<label>Last Name</label>
+		<input name="lastname" class="form-control" type="text">
+		</div>
+		</div>
+		
+		<div class="col-sm-6">
+			<div style="display: none;" class="alert alert-danger" id="email"></div>
+		<div class="form-group">
+		<label>Email <span class="text-danger">*</span></label>
+		<input name="email" class="form-control" type="email">
+		</div>
+		</div>
+		
+		<div class="col-sm-6 col-md-6 col-lg-6">
+			<div style="display: none;" class="alert alert-danger" id="department"></div>
+			<div class="form-group">
+			<label>Department</label>
+			<select name="department" class="form-control select">
+			<option>Cardiology</option>
+			<option>Eye Care</option>
+			</select>
+			</div>
+			</div>
+		
+		<div class="col-sm-6">
+			<div style="display: none;" class="alert alert-danger" id="dateOfBirth"></div>
+		<div class="form-group">
+		<label>Date of Birth</label>
+		<div class="cal-icon">
+		<input name="dateOfBirth" type="date" class="form-control bootstrap-datetimepicker">
+		</div>
+		</div>
+		</div>
+		<div class="col-sm-6">
+			
+		<div class="form-group gender-select">
+		<label class="gen-label">Gender:</label>
+		<div class="form-check-inline">
+		<label class="form-check-label">
+		<input name="gender" type="radio" class="form-check-input" value="Male">Male
+		</label>
+		</div>
+		<div class="form-check-inline">
+		<label class="form-check-label">
+		<input name="gender" type="radio" class="form-check-input" value="Female">Female
+		</label>
+		</div>
+		</div>
+		</div>
+		<div class="col-sm-12">
+		<div class="row">
+		<div class="col-sm-12">
+			<div style="display: none;" class="alert alert-danger" id="address"></div>
+		<div class="form-group">
+		<label>Address</label>
+		<input name="address" type="text" class="form-control ">
+		</div>
+		</div>
+		
+		</div>
+		</div>
+		<div class="col-sm-6">
+			<div style="display: none;" class="alert alert-danger" id="phone"></div>
+		<div class="form-group">
+		<label>Phone </label>
+		<input name="phone" class="form-control" type="text">
+		</div>
+		</div>
+		<div class="col-sm-6">
+		<div class="form-group">
+		<label>Avatar</label>
+		<div class="profile-upload">
+		<div class="upload-img">
+		<img alt src="assets/img/user.jpg">
+		</div>
+		<div class="upload-input">
+		<input name="avatar" type="file" class="form-control">
+		</div>
+		</div>
+		</div>
+		</div>
+		<div class="form-group">
+			<label class="display-block">Role</label>
+			<div class="form-check form-check-inline">
+			<input class="form-check-input"  name="role" type="radio" id="doctor_active" value="Doktor" checked>
+			<label class="form-check-label" for="doctor_active">
+			Doctor
+			</label>
+			</div>
+			<div class="form-check form-check-inline">
+			<input class="form-check-input" name="role" type="radio" id="doctor_inactive" value="Yönetici">
+			<label class="form-check-label" for="doctor_inactive">
+			Admin
+			</label>
+			
+			</div>
+	
+				</div>
+		</div>
+		
+		
+		<div class="m-t-20 text-center">
+		<button type="submit" class="btn btn-primary submit-btn">Create Doctor</button>
+		</div>
+		</form>
+		</div>
+		</div>
+		</div>
+
+<%- include("partials/_chat") %>
+</div>
+</div>
+<div class="sidebar-overlay" data-reff></div>
+<script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="assets/js/select2.min.js"></script>
+<script type="text/javascript" src="assets/js/moment.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script>
+	const form = document.querySelector('form');
+const emailError = document.querySelector('#email');
+const firstnameError = document.querySelector('#firstname');
+const lastnameError = document.querySelector('#lastname');
+const departmentError = document.querySelector('#department');
+const phoneError = document.querySelector('#phone');
+const birthdayError = document.querySelector('#dateOfBirth');
+const addressError = document.querySelector('#address');
+const genderError = document.querySelector('#gender');
+const avatarError = document.querySelector('#avatar');
+const successMessage = document.querySelector('#successMessage');
+
+
+
+form.addEventListener("submit", async (e) => {
+   e.preventDefault();
+
+
+   setTimeout(function () {
+	emailError.textContent = "";
+   firstnameError.textContent = "";
+   lastnameError.textContent = "";
+   departmentError.textContent = "";
+   birthdayError.textContent = "";
+   phoneError.textContent = "";
+   addressError.textContent = "";
+   genderError.textContent = "";
+   avatarError.textContent = "";
+   emailError.style.display = "none";
+   firstnameError.style.display = "none";
+   lastnameError.style.display = "none";
+   departmentError.style.display = "none";
+   birthdayError.style.display = "none";
+   phoneError.style.display = "none";
+   addressError.style.display = "none";
+   genderError.style.display = "none";
+   avatarError.style.display = "none";
+   successMessage.style.display= "none";
+   }, 5000); 
+
+   const email = form.email.value;
+   const firstname = form.firstname.value;
+   const lastname = form.lastname.value;
+   const department = form.department.value;
+   const phone = form.phone.value;
+   const dateOfBirth = form.dateOfBirth.value;
+   const address = form.address.value;
+   const avatar = form.avatar.files[0]; 
+   const gender = form.querySelector('input[name="gender"]:checked').value; 
+
+
+
+   
+   try {
+      const res = await fetch('/dashboard/add-doctor', {
+         method: "POST",
+         body: JSON.stringify({ email, firstname, lastname, department, phone, dateOfBirth,  address, gender, avatar }),
+         headers: { "Content-Type": "application/json" }
+      });
+
+      const data = await res.json();
+
+      if (res.status === 400) {
+         if (data.email) {
+            emailError.textContent = data.email;
+            emailError.style.display = "block";
+         }
+
+         if (data.firstname) {
+            firstnameError.textContent = data.firstname;
+            firstnameError.style.display = "block";
+         }
+
+         if (data.lastname) {
+            lastnameError.textContent = data.lastname;
+            lastnameError.style.display = "block";
+         }
+
+         if (data.department) {
+            departmentError.textContent = data.department;
+            departmentError.style.display = "block";
+         }
+
+         if (data.phone) {
+            phoneError.textContent = data.phone;
+            phoneError.style.display = "block";
+         }
+
+         if (data.dateOfBirth) {
+            birthdayError.textContent = data.dateOfBirth;
+            birthdayError.style.display = "block";
+         }
+
+         if (data.address) {
+            addressError.textContent = data.address;
+            addressError.style.display = "block";
+         }
+
+		 if (data.gender) {
+            genderError.textContent = data.gender;
+            genderError.style.display = "block";
+         }
+
+		 if (data.avatar) {
+            avatarError.textContent = data.avatar;
+            avatarError.style.display = "block";
+         }
+      }     
+
+	if (data.doctor ) {
+				  form.reset();
+				  successMessage.style.display = "block";
+                }
+
+
+   } catch (err) {
+      console.log("ERR::", err);
+   }
+});
+
+ </script>
+</body>
+
+<!-- Mirrored from medifab.dreamguystech.com/admin-template/add-doctor.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Sep 2023 15:24:56 GMT -->
+</html>
